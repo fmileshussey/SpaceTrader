@@ -1,0 +1,34 @@
+/*
+  Islands are split into categories by size.
+*/
+
+{
+  "medium": {
+    "java": {
+      "name": "Java",
+      "charts_to": [
+        "Leru",
+        "Prima"
+      ],
+      "description": "The port of Java"
+    },
+    "prima": {
+      "name": "Prima",
+      "charts_to": [
+        "Leru",
+        "Java"
+      ],
+      "description": "The port of Prima"
+    }
+  },
+  "uninhabited": {
+    "leru": {
+      "name": "Leru",
+      "charts_to": [
+        "Java",
+        "Prima"
+      ],
+      "description": "The uninhabited island of Leru"
+    }
+  }
+}
