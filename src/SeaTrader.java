@@ -5,6 +5,11 @@
  * @version 1.0.0
  */
 public class SeaTrader {
+
+    public SeaTrader() {
+
+    }
+
     public static void main(String[] args) {
 
     }

@@ -10,7 +10,7 @@
         "Leru",
         "Prima"
       ],
-      "description": "The port of Java"
+      "description": "The port of Java."
     },
     "prima": {
       "name": "Prima",
@@ -18,7 +18,7 @@
         "Leru",
         "Java"
       ],
-      "description": "The port of Prima"
+      "description": "The port of Prima."
     }
   },
   "uninhabited": {
@@ -28,7 +28,15 @@
         "Java",
         "Prima"
       ],
-      "description": "The uninhabited island of Leru"
+      "description": "The uninhabited island of Leru.",
+      "resources": [
+        "Coconuts",
+        "50",
+        "Wood",
+        "50",
+        "Rock",
+        "10"
+      ]
     }
   }
 }
