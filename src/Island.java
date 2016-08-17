@@ -3,54 +3,34 @@
  *
  * @author Finnegan Miles-Hussey
  */
-public abstract class Island {
+abstract class Island {
     private String name;
-    private String[] charts_to;
+    private Island[] charts_to;
     private String description;
 
-    /*
-    public Island(String name, String[] charts_to, String description) {
-        this.name = name;
-        this.charts_to = charts_to;
-        this.description = description;
-    }
-
-
     /**
-     * Constructor for uninhabited islands.
-     *
-    public Island(String name, String[] charts_to, String description, String[] resources) {
-        this.name = name;
-        this.charts_to = charts_to;
-        this.description = description;
-        this.resources = resources;
-    }
-    */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public void setCharts_to(String[] charts_to) {
-        this.charts_to = charts_to;
-    }
-
+     * An accessor for the name.
+     * @return name the name of the Island.
+     */
     public String getName() {
         return name;
     }
 
-
-    public String[] getCharts_to() {
-        return charts_to;
-    }
-
+    /**
+     * An accessor for the description of the Island.
+     *
+     * @return description the description of the Island.
+     */
     public String getDescription() {
         return description;
     }
 
-
+    /**
+     * An accessor for the array of Islands that can be chartered ti
+     *
+     * @return charts_to an array of islands that available.
+     */
+    public Island[] getCharts_to() {
+        return charts_to;
+    }
 }
