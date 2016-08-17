@@ -3,34 +3,30 @@
  *
  * @author Finnegan Miles-Hussey
  */
-public abstract class Commodity {
+abstract class Commodity {
+    private String name = "";
     private String description = "";
     private double weight = 0.0;
     private String size = "";
+    private int quantity = 0;
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
-
-    public void setSize(String size) {
-        this.size = size;
-    }
-
-    public String getSize() {
-        return size;
-    }
-
-    public String getDescription() {
-        return description;
+    public int getQuantity() {
+        return quantity;
     }
 
     public double getWeight() {
         return weight;
     }
 
+    public String getDescription() {
+        return description;
+    }
 
+    public String getName() {
+        return name;
+    }
 }
