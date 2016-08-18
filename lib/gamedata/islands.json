@@ -29,7 +29,7 @@
         "Prima"
       ],
       "description": "The uninhabited island of Leru.",
-      "Commodities": [
+      "commodities": [
         "Coconuts",
         "50",
         "Wood",

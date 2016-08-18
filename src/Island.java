@@ -7,6 +7,25 @@ abstract class Island {
     private String name;
     private Island[] charts_to;
     private String description;
+    private Store[] stores;
+    private Ship[] docks;
+
+    /**
+     * Method to facilitate docking a ship at an Islands dock.
+     *
+     * @param add Ship to be added.
+     */
+    public void addShip(Ship add) {
+        int index;
+        for (index = 0; index < docks.length; index++) {
+            if (docks[index] == null) {
+                docks[index] = add;
+                break;
+            } else if (index == docks.length - 1) {
+                System.out.println("Dock is currently full.");
+            }
+        }
+    }
 
     /**
      * An accessor for the name.
@@ -32,5 +51,9 @@ abstract class Island {
      */
     public Island[] getCharts_to() {
         return charts_to;
+    }
+
+    public Store[] getStores() {
+        return stores;
     }
 }

@@ -9,6 +9,7 @@ public class Island_Uninhabited extends Island {
     private String description;
     private Commodity[] commodities;
     private Commodity[] dis_commod;
+    private Ship[] docks;
 
     /**
      * Creates an Uninhabited Island with initial values.
@@ -24,6 +25,7 @@ public class Island_Uninhabited extends Island {
         this.description = description;
         this.commodities = commodities;
         dis_commod = new Commodity[commodities.length];
+        docks = new Ship[1];
     }
 
     /**
@@ -50,6 +52,11 @@ public class Island_Uninhabited extends Island {
     public Commodity[] getCommodities() {
         //incorrect - currently returning full list of commodities.
         return commodities;
+    }
+
+    @Override
+    public Store[] getStores() {
+        return null;
     }
 
 }
