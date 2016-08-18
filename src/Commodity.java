@@ -3,12 +3,18 @@
  *
  * @author Finnegan Miles-Hussey
  */
-abstract class Commodity {
+public class Commodity {
     private String name = "";
     private String description = "";
     private double weight = 0.0;
-    private String size = "";
+    //private String size = "";
     private int quantity = 0;
+
+    public Commodity(String name, String description, double weight) {
+        this.name = name;
+        this.description = description;
+        this.weight = weight;
+    }
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
@@ -28,5 +34,10 @@ abstract class Commodity {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public String toString() {
+        return name + "; " + description;
     }
 }

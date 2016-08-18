@@ -1,15 +1,17 @@
+import java.util.Arrays;
+
 /**
  * 17/08/2016
  *
  * @author Finnegan Miles-Hussey
  */
-public class Island_Uninhabited extends Island {
-    private String name;
-    private Island[] charts_to;
-    private String description;
+class Island_Uninhabited extends Island {
+    //private String name;
+    //private Island[] charts_to;
+    //private String description;
     private Commodity[] commodities;
     private Commodity[] dis_commod;
-    private Ship[] docks;
+    //private Ship[] docks;
 
     /**
      * Creates an Uninhabited Island with initial values.
@@ -19,7 +21,7 @@ public class Island_Uninhabited extends Island {
      * @param description a description of the island.
      * @param commodities an of commodities available for discovering.
      */
-    public Island_Uninhabited(String name, Island[] charts_to, String description, Commodity[] commodities) {
+    Island_Uninhabited(String name, Island[] charts_to, String description, Commodity[] commodities) {
         this.name = name;
         this.charts_to = charts_to;
         this.description = description;
@@ -59,4 +61,10 @@ public class Island_Uninhabited extends Island {
         return null;
     }
 
+    @Override
+    public String toString() {
+        return "name: " + name + ", Description: " + ", Charts to: " +
+                Arrays.toString(charts_to) + ", Commodities: " + Arrays.toString(commodities) +
+                ", Docks: " + Arrays.toString(docks);
+    }
 }

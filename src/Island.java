@@ -1,14 +1,16 @@
+import java.util.Arrays;
+
 /**
  * 12/08/2016
  *
  * @author Finnegan Miles-Hussey
  */
 abstract class Island {
-    private String name;
-    private Island[] charts_to;
-    private String description;
-    private Store[] stores;
-    private Ship[] docks;
+    protected String name;
+    protected Island[] charts_to;
+    protected String description;
+    protected Store[] stores;
+    protected Ship[] docks;
 
     /**
      * Method to facilitate docking a ship at an Islands dock.
@@ -17,6 +19,7 @@ abstract class Island {
      */
     public void addShip(Ship add) {
         int index;
+
         for (index = 0; index < docks.length; index++) {
             if (docks[index] == null) {
                 docks[index] = add;

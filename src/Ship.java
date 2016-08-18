@@ -3,6 +3,10 @@
  *
  * @author Finnegan Miles-Hussey
  */
-abstract class Ship {
+public class Ship {
+    private String name;
 
+    public Ship(String name) {
+        this.name = name;
+    }
 }

@@ -4,11 +4,11 @@
  * @author Finnegan Miles-Hussey
  */
 public class Island_Small extends Island {
-    private String name;
-    private Island[] charts_to;
-    private String description;
-    private Store[] stores;
-    private Ship[] docks;
+    //private String name;
+    //private Island[] charts_to;
+    //private String description;
+    //private Store[] stores;
+    //private Ship[] docks;
 
 
     public Island_Small(String name, Island[] charts_to, String description, Store[] stores) {
