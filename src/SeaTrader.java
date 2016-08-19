@@ -15,7 +15,13 @@ public class SeaTrader {
         c[1].setQuantity(10);
         Island i = new Island_Uninhabited("Rockland", new Island[5], "Rocky", c);
         Ship s = new Ship("great moves ethan");
+        Ship k = new Ship("Keep it up");
+        Ship j = new Ship("proud of you");
+
         i.addShip(s);
+        i.addShip(k);
+        i.addShip(j);
+
         System.out.println(i);
     }
 }

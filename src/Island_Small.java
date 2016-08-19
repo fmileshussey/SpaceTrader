@@ -3,20 +3,14 @@
  *
  * @author Finnegan Miles-Hussey
  */
-public class Island_Small extends Island {
-    //private String name;
-    //private Island[] charts_to;
-    //private String description;
-    //private Store[] stores;
-    //private Ship[] docks;
+public class Island_Small extends Island_Inhabited {
 
-
-    public Island_Small(String name, Island[] charts_to, String description, Store[] stores) {
+    public Island_Small(String name, Island[] charts_to, String description, Building[] buildings) {
         this.name = name;
         this.charts_to = charts_to;
         this.description = description;
-        this.stores = stores;
-        docks = new Ship[5];
+        this.buildings = buildings;
+        docks = new Ship[3];
     }
 
 

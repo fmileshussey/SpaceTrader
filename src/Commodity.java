@@ -38,6 +38,6 @@ public class Commodity {
 
     @Override
     public String toString() {
-        return name + "; " + description;
+        return "Name: " + name + ", Description: " + description + ", Quantity: " + quantity + ", Weight: " + weight;
     }
 }

@@ -5,7 +5,7 @@ import java.util.Arrays;
  *
  * @author Finnegan Miles-Hussey
  */
-class Island_Uninhabited extends Island {
+public class Island_Uninhabited extends Island {
     //private String name;
     //private Island[] charts_to;
     //private String description;
@@ -21,7 +21,7 @@ class Island_Uninhabited extends Island {
      * @param description a description of the island.
      * @param commodities an of commodities available for discovering.
      */
-    Island_Uninhabited(String name, Island[] charts_to, String description, Commodity[] commodities) {
+    public Island_Uninhabited(String name, Island[] charts_to, String description, Commodity[] commodities) {
         this.name = name;
         this.charts_to = charts_to;
         this.description = description;
@@ -57,14 +57,9 @@ class Island_Uninhabited extends Island {
     }
 
     @Override
-    public Store[] getStores() {
-        return null;
-    }
-
-    @Override
     public String toString() {
-        return "name: " + name + ", Description: " + ", Charts to: " +
-                Arrays.toString(charts_to) + ", Commodities: " + Arrays.toString(commodities) +
-                ", Docks: " + Arrays.toString(docks);
+        return "Name: " + name + ", Description: " + ", Charts to: " +
+                Arrays.toString(charts_to) +
+                ", Docks: " + Arrays.toString(docks) + ", Commodities: " + Arrays.toString(commodities);
     }
 }

@@ -9,8 +9,7 @@ abstract class Island {
     protected String name;
     protected Island[] charts_to;
     protected String description;
-    protected Store[] stores;
-    protected Ship[] docks;
+    protected Ship[] docks; // really not sure if i want to use a hashmap for this or not, come back to this.
 
     /**
      * Method to facilitate docking a ship at an Islands dock.
@@ -23,11 +22,25 @@ abstract class Island {
         for (index = 0; index < docks.length; index++) {
             if (docks[index] == null) {
                 docks[index] = add;
+                System.out.println("Docks: '" + add.getName() + "' successfully docked.");
                 break;
             } else if (index == docks.length - 1) {
                 System.out.println("Dock is currently full.");
             }
         }
+    }
+
+    public Ship removeShip(Ship remove) {
+        int index;
+        System.out.println("Removing ship: " + remove.getName());
+        for (index = 0; index < docks.length; index++) {
+            if (docks[index] == remove) {
+                docks[index] = null;
+                return remove;
+            }
+        }
+        System.out.println("Ship: '" + remove.getName() + "' not in dock here.");
+        return null;
     }
 
     /**
@@ -56,7 +69,10 @@ abstract class Island {
         return charts_to;
     }
 
-    public Store[] getStores() {
-        return stores;
+    @Override
+    public String toString() {
+        return "Name: " + name + ", Description: " + ", Charts to: " +
+                Arrays.toString(charts_to) +
+                ", Docks: " + Arrays.toString(docks);
     }
 }

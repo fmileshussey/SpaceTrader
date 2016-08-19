@@ -4,9 +4,16 @@
  * @author Finnegan Miles-Hussey
  */
 public class Ship {
-    private String name;
+    protected String name;
+    protected String description;
+    protected Commodity[] hold;
+    protected int crew;
 
     public Ship(String name) {
         this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 }
