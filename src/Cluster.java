@@ -3,13 +3,13 @@
  *
  * @author Finnegan Miles-Hussey
  */
-public class Constellation {
+public class Cluster {
     private String name;
     private String description;
-    private Constellation connects;
+    private Cluster connects;
     private Planet[] planets;
 
-    public Constellation(String name, String description, Constellation connects, Planet[] planets) {
+    public Cluster(String name, String description, Cluster connects, Planet[] planets) {
         this.name = name;
         this.description = description;
         this.connects = connects;
@@ -29,7 +29,7 @@ public class Constellation {
 
     }
 
-    public Constellation getConnects() {
+    public Cluster getConnects() {
         return connects;
     }
 }
