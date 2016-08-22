@@ -5,14 +5,14 @@ import java.util.Arrays;
  *
  * @author Finnegan Miles-Hussey
  */
-abstract class Island {
+abstract class Planet {
     protected String name;
-    protected Island[] charts_to;
+    protected Planet[] charts_to;
     protected String description;
     protected Ship[] docks; // really not sure if i want to use a hashmap for this or not, come back to this.
 
     /**
-     * Method to facilitate docking a ship at an Islands dock.
+     * Method to facilitate docking a ship at an Planets dock.
      *
      * @param add Ship to be added.
      */
@@ -45,27 +45,28 @@ abstract class Island {
 
     /**
      * An accessor for the name.
-     * @return name the name of the Island.
+     *
+     * @return name the name of the Planet.
      */
     public String getName() {
         return name;
     }
 
     /**
-     * An accessor for the description of the Island.
+     * An accessor for the description of the Planet.
      *
-     * @return description the description of the Island.
+     * @return description the description of the Planet.
      */
     public String getDescription() {
         return description;
     }
 
     /**
-     * An accessor for the array of Islands that can be chartered ti
+     * An accessor for the array of Planets that can be chartered ti
      *
-     * @return charts_to an array of islands that available.
+     * @return charts_to an array of Planets that available.
      */
-    public Island[] getCharts_to() {
+    public Planet[] getCharts_to() {
         return charts_to;
     }
 

@@ -3,8 +3,8 @@
  *
  * @author Finnegan Miles-Hussey
  */
-public class Island_Large extends Island_Inhabited {
-    public Island_Large(String name, Island[] charts_to, String description, Building[] buildings) {
+public class Planet_Large extends Planet_Inhabited {
+    public Planet_Large(String name, Planet[] charts_to, String description, Building[] buildings) {
         this.name = name;
         this.charts_to = charts_to;
         this.description = description;

@@ -3,25 +3,25 @@
  *
  * @author Finnegan Miles-Hussey
  */
-public class Archipelago {
+public class Constellation {
     private String name;
     private String description;
-    private Archipelago connects;
-    private Island[] islands;
+    private Constellation connects;
+    private Planet[] planets;
 
-    public Archipelago(String name, String description, Archipelago connects, Island[] islands) {
+    public Constellation(String name, String description, Constellation connects, Planet[] planets) {
         this.name = name;
         this.description = description;
         this.connects = connects;
-        this.islands = islands;
+        this.planets = planets;
     }
 
     public String getName() {
         return name;
     }
 
-    public Island[] getIslands() {
-        return islands;
+    public Planet[] getPlanets() {
+        return planets;
     }
 
     public String getDescription() {
@@ -29,7 +29,7 @@ public class Archipelago {
 
     }
 
-    public Archipelago getConnects() {
+    public Constellation getConnects() {
         return connects;
     }
 }

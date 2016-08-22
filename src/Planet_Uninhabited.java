@@ -5,23 +5,23 @@ import java.util.Arrays;
  *
  * @author Finnegan Miles-Hussey
  */
-public class Island_Uninhabited extends Island {
+public class Planet_Uninhabited extends Planet {
     //private String name;
-    //private Island[] charts_to;
+    //private Planet[] charts_to;
     //private String description;
     private Commodity[] commodities;
     private Commodity[] dis_commod;
     //private Ship[] docks;
 
     /**
-     * Creates an Uninhabited Island with initial values.
+     * Creates an Uninhabited Planet with initial values.
      *
-     * @param name        the name of the island.
-     * @param charts_to   an array of Islands that can be charted to from this Island.
-     * @param description a description of the island.
+     * @param name        the name of the Planet.
+     * @param charts_to   an array of Planets that can be charted to from this Planet.
+     * @param description a description of the Planet.
      * @param commodities an of commodities available for discovering.
      */
-    public Island_Uninhabited(String name, Island[] charts_to, String description, Commodity[] commodities) {
+    public Planet_Uninhabited(String name, Planet[] charts_to, String description, Commodity[] commodities) {
         this.name = name;
         this.charts_to = charts_to;
         this.description = description;
@@ -32,7 +32,7 @@ public class Island_Uninhabited extends Island {
 
     /**
      * Method for processing a player roll in order
-     * for player to discover more of the Island
+     * for player to discover more of the Planet
      * Commodities.
      *
      * @param roll the roll that the player makes

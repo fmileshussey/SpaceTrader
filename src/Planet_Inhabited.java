@@ -5,7 +5,7 @@ import java.util.Arrays;
  *
  * @author Finnegan Miles-Hussey
  */
-abstract class Island_Inhabited extends Island {
+abstract class Planet_Inhabited extends Planet {
     protected Building[] buildings;
 
     public Building[] getBuildings() {

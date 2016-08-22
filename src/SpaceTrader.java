@@ -4,9 +4,9 @@
  * @author Finnegan Miles-Hussey
  * @version 1.0.0
  */
-public class SeaTrader {
+public class SpaceTrader {
 
-    public SeaTrader() {
+    public SpaceTrader() {
     }
 
     public static void main(String[] args) {
