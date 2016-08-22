@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SeaTrader.iml" filepath="$PROJECT_DIR$/SeaTrader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpaceTrader.iml" filepath="$PROJECT_DIR$/SpaceTrader.iml" />
     </modules>
   </component>
 </project>
