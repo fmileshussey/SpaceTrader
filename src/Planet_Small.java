@@ -3,9 +3,9 @@
  *
  * @author Finnegan Miles-Hussey
  */
-public class Planet_Small extends Island_Inhabited {
+public class Planet_Small extends Planet_Inhabited {
 
-    public Island_Small(String name, Island[] charts_to, String description, Building[] buildings) {
+    public Planet_Small(String name, Planet[] charts_to, String description, Building[] buildings) {
         this.name = name;
         this.charts_to = charts_to;
         this.description = description;

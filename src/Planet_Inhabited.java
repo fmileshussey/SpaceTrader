@@ -7,6 +7,7 @@ import java.util.Arrays;
  */
 abstract class Planet_Inhabited extends Planet {
     protected Building[] buildings;
+    protected int taxation = 0;
 
     public Building[] getBuildings() {
         return buildings;
