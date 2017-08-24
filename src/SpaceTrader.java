@@ -9,6 +9,7 @@
 public class SpaceTrader {
 
     private int argc;
+    private GameState game;
     
     private void run(){
 	init();
@@ -17,11 +18,18 @@ public class SpaceTrader {
 
     private void init(){
 	System.out.println("> Welcome to SpaceTrader");
-	if(!argc){
+	if(argc < 1){
+	    Player p = new Player();
+	    game = new GameState(p);
 	    
+	}else{
+	    game = new GameState();
 	}
     }
 
+    /**
+     * loop() - the main game loop
+     */
     private void loop(){
 	boolean running = true;
 	while(running){
@@ -30,7 +38,7 @@ public class SpaceTrader {
     }
 
     public static void main(String[] args) {
-	new SpaceTrader.run();
+        new SpaceTrader().run();
     }
 }
 
