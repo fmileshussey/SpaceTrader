@@ -7,7 +7,6 @@ import java.util.Arrays;
  */
 abstract class Planet {
     protected String name;
-    protected Planet[] charts_to;
     protected String description;
     protected Ship[] docks; // really not sure if i want to use a hashmap for this or not, come back to this.
 
