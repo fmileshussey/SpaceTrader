@@ -65,14 +65,13 @@ abstract class Planet {
      *
      * @return charts_to an array of Planets that available.
      */
-    public Planet[] getCharts_to() {
+    /* public Planet[] getCharts_to() {
         return charts_to;
-    }
+	}*/
 
     @Override
     public String toString() {
-        return "Name: " + name + ", Description: " + ", Charts to: " +
-                Arrays.toString(charts_to) +
+        return "Name: " + name + ", Description: " +
                 ", Docks: " + Arrays.toString(docks);
     }
 }

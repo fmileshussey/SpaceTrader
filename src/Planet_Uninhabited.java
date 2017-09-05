@@ -21,9 +21,8 @@ public class Planet_Uninhabited extends Planet {
      * @param description a description of the Planet.
      * @param commodities an of commodities available for discovering.
      */
-    public Planet_Uninhabited(String name, Planet[] charts_to, String description, Commodity[] commodities) {
+    public Planet_Uninhabited(String name, String description, Commodity[] commodities) {
         this.name = name;
-        this.charts_to = charts_to;
         this.description = description;
         this.commodities = commodities;
         dis_commod = new Commodity[commodities.length];
@@ -58,8 +57,7 @@ public class Planet_Uninhabited extends Planet {
 
     @Override
     public String toString() {
-        return "Name: " + name + ", Description: " + ", Charts to: " +
-                Arrays.toString(charts_to) +
+        return "Name: " + name + ", Description: " + 
                 ", Docks: " + Arrays.toString(docks) + ", Commodities: " + Arrays.toString(commodities);
     }
 }

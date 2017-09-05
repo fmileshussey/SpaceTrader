@@ -1,5 +1,3 @@
-
-
 /**
  * SpaceTrader.java - A space based trading game.
  *
@@ -18,12 +16,11 @@ public class SpaceTrader {
 
     private void init(){
 	System.out.println("> Welcome to SpaceTrader");
-	game = GameState.getState();
 	if(argc < 1){
 	    Player p = Player.getPlayer();
-	    game.init(p, true);
+	    new NewGame().init(game);
 	}else{
-	    game.init(p, false); // not sure how this is gonna work
+	    game = game.getState(); // not sure how this is gonna work
 	}
     }
 
