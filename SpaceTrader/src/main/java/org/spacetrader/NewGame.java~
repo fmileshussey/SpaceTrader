@@ -11,7 +11,7 @@ public class NewGame{
     }
     
     public GameState init(GameState game){
-	JGraphT world = generateWorld();
+	UndirectedGraph<Planet, DefaultEdge> world = generateWorld();
 	Player p = newPlayer();
 	game = game.getState();
     }
@@ -57,8 +57,8 @@ public class NewGame{
 	
     }
     
-    private JGraphT generateWorld(){
-	JGraphT world;
+    private UndirectedGraph<Planet, DefaultEdge> generateWorld(){
+	UndirectedGraph<Planet, DefaultEdge> world;
 	for (int i = 0; i < 15; i++){
 	    Planet plnt;
 	    int roll = ThreadLocalRandom.current().nextInt(1, 101); //rand 1-100

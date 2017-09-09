@@ -11,9 +11,11 @@ public class NewGame{
     }
     
     public GameState init(GameState game){
-	JGraphT world = generateWorld();
+	UndirectedGraph<Planet, DefaultEdge> world = generateWorld();
 	Player p = newPlayer();
 	game = game.getState();
+
+	return game;
     }
     
     private Planet newPlanet(planet_t size){
@@ -33,6 +35,8 @@ public class NewGame{
 	case UNINHABITED:
 	    plnt = new Planet_Uninhabited(name, description, comm);
 	}
+
+	return plnt;
 	
     }
     
@@ -47,6 +51,8 @@ public class NewGame{
 	    building_count = 6;
 	case SMALL:
 	    building_count = 3;
+	default:
+	    building_count = 1;
 	}
 	b_set = new Building[building_count];
 	
@@ -57,20 +63,38 @@ public class NewGame{
 	
     }
     
-    private JGraphT generateWorld(){
-	JGraphT world;
-	for (int i = 0; i < 15; i++){
-	    Planet plnt;
-	    int roll = ThreadLocalRandom.current().nextInt(1, 101); //rand 1-100
-	    if(roll >= 10){
-		plnt = newPlanet(planet_t.LARGE);
-	    }else if(roll >= 30){
+    private UndirectedGraph<Planet, DefaultEdge> generateWorld(){
+	UndirectedGraph<Planet, DefaultEdge> world;
+	for (int k = 0; k < 3; k++){
+	    Planet connection;
+	    Planet center;
+	    for (int i = 0; i < 5; i++){
+		Planet plnt;
+		int roll = ThreadLocalRandom.current().nextInt(1, 101); //rand 1-100
+		if(roll >= 10){
+		    plnt = newPlanet(planet_t.LARGE);
+		}else if(roll >= 30){
 		    plnt = newPlanet(planet_t.MEDIUM);
-	    }else if(roll >= 60){
-		plnt = newPlanet(planet_t.SMALL);
-	    }else{
-		plnt = newPlanet(planet_t.UNINHABITED);
+		}else if(roll >= 60){
+		    plnt = newPlanet(planet_t.SMALL);
+		}else{
+		    plnt = newPlanet(planet_t.UNINHABITED);
+		}
+
+		/**This current method of adding edges between planets is not
+		 incredibly sophisticated, needs some serious working on*/
+		
+		world.addVertex(plnt);
+		if(i == 0){
+		    center = plnt;
+		    if(connection != null) world.addEdge(plnt, connection); 
+		}else{
+		    world.addEdge(plnt, center); 
+		}
+		if(i == 4) connection = plnt;
 	    }
+	    
+	    
 	}
 
 	return world;
