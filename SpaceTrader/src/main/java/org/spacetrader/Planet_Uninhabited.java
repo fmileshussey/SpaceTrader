@@ -55,6 +55,8 @@ public class Planet_Uninhabited extends Planet {
         return commodities;
     }
 
+    public void save(){}
+
     @Override
     public String toString() {
         return "Name: " + name + ", Description: " + 

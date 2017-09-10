@@ -60,6 +60,8 @@ abstract class Planet {
         return description;
     }
 
+    abstract void save();
+
     /**
      * An accessor for the array of Planets that can be chartered ti
      *

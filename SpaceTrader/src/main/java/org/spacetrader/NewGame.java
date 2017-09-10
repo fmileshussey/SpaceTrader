@@ -34,6 +34,8 @@ public class NewGame{
 	    plnt = new Planet_Small(name, description, b_set);
 	case UNINHABITED:
 	    plnt = new Planet_Uninhabited(name, description, comm);
+	default:
+	    plnt = null;;
 	}
 
 	return plnt;
@@ -65,9 +67,10 @@ public class NewGame{
     
     private UndirectedGraph<Planet, DefaultEdge> generateWorld(){
 	UndirectedGraph<Planet, DefaultEdge> world;
+	world = new SimpleGraph<Planet, DefaultEdge>(DefaultEdge.class);
 	for (int k = 0; k < 3; k++){
-	    Planet connection;
-	    Planet center;
+	    Planet connection = null;
+	    Planet center = null;
 	    for (int i = 0; i < 5; i++){
 		Planet plnt;
 		int roll = ThreadLocalRandom.current().nextInt(1, 101); //rand 1-100

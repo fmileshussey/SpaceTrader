@@ -15,16 +15,13 @@ public class SpaceTrader {
     }
 
     private void init(){
-	Player p;
 	System.out.println("> Welcome to SpaceTrader");
 	if(argc < 1){
-	    p = Player.getPlayer();
+	    Player p = Player.getPlayer();
 	    new NewGame().init(game);
 	}else{
 	    game = game.getState(); // not sure how this is gonna work
 	    game.init();
-	    p = LoadSave.loadPlayer();
-	    LoadSave.loadWorld();
 	}
     }
 
@@ -36,7 +33,6 @@ public class SpaceTrader {
 	while(running){
 	    
 	}
-	game.save();
     }
 
     public static void main(String[] args) {
