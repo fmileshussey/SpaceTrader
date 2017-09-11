@@ -9,4 +9,6 @@ public class Building {
     protected String belongs;
     protected String size;
     protected boolean blockade;
+
+    public void save();
 }
