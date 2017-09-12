@@ -10,5 +10,5 @@ public class Building {
     protected String size;
     protected boolean blockade;
 
-    public void save();
+    //abstract public void save();
 }

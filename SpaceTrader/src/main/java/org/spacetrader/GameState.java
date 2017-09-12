@@ -30,8 +30,8 @@ public final class GameState{
 	p.save();
 	BreadthFirstIterator worldIterator = new BreadthFirstIterator(world);
 	while(worldIterator.hasNext()){
-	    plnt = worldIterator.provideNextVertex();
-	    plnt.save();
+	    //plnt = worldIterator.provideNextVertex();
+	    //plnt.save();
 	}
     }
 
