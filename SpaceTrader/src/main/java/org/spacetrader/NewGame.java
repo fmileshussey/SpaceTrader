@@ -57,9 +57,10 @@ public class NewGame{
 	    building_count = 1;
 	}
 	b_set = new Building[building_count];
-	
-	for(int i = 0; i < building_count; i++){
-	    b_set[i] = new Building();
+	b_set[0] = new Government_Build("Gov", "me", "ok", false); // placeholder values
+	for(int i = 1; i < building_count; i++){
+	    b_set[i] = new Shop();
+	    
 	}
 	return b_set;
 	

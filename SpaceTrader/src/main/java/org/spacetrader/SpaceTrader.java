@@ -48,7 +48,7 @@ public class SpaceTrader {
 	    **/
 	    System.out.print("> ");
 	    command = userInput.next(); //pass to a method that checks it to a HashMap?
-	    if(command.equalsTo("quit")){
+	    if(command.equals("quit")){
 		running = false;
 	    }else{
 		

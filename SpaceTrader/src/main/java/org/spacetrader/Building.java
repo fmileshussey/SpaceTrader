@@ -3,12 +3,12 @@
  *
  * @author Finnegan Miles-Hussey
  */
-public class Building {
+abstract class Building {
     protected String name;
     protected String description;
     protected String belongs;
     protected String size;
     protected boolean blockade;
 
-    //abstract public void save();
+    abstract public void save();
 }
