@@ -1,13 +1,14 @@
+/**
+ * SpaceTrader.java
+ * @desc A terminal based trading game set in Space.
+ * @author Finnegan Miles-Hussey
+ * @version 0.1.0
+ */
+
 import org.jgrapht.*;
 import org.jgrapht.graph.*;
 import java.util.Scanner;
 
-/**
- * SpaceTrader.java - A space based trading game.
- *
- * @author Finnegan Miles-Hussey
- * @version 0.1.0
- */
 public class SpaceTrader {
 
     private int argc;

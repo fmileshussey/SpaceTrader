@@ -1,6 +1,11 @@
+/**
+ * NewGame.java
+ * @desc called from the SpaceTrader class when a new game needs to be created
+ * initialises various games objects and returns a GameState
+*/
+
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
-
 import org.jgrapht.*;
 import org.jgrapht.graph.*;
 
@@ -10,7 +15,7 @@ public class NewGame{
 	LARGE, MEDIUM, SMALL, UNINHABITED
     }
     
-    public GameState init(GameState game){
+    public static GameState init(GameState game){
 	UndirectedGraph<Planet, DefaultEdge> world = generateWorld();
 	Player p = newPlayer();
 	game = game.getState();
@@ -18,7 +23,7 @@ public class NewGame{
 	return game;
     }
     
-    private Planet newPlanet(planet_t size){
+    private static Planet newPlanet(planet_t size){
 	Planet plnt;
 	String name = "placeholder"; //will be randomly selected from a group of names
 	String description = "Port of " + name;
@@ -42,7 +47,7 @@ public class NewGame{
 	
     }
     
-    private Building[] newBuildingSet(planet_t size){
+    private static Building[] newBuildingSet(planet_t size){
 	int building_count;
 	Building[] b_set;
 	
@@ -66,7 +71,7 @@ public class NewGame{
 	
     }
     
-    private UndirectedGraph<Planet, DefaultEdge> generateWorld(){
+    private static UndirectedGraph<Planet, DefaultEdge> generateWorld(){
 	UndirectedGraph<Planet, DefaultEdge> world;
 	world = new SimpleGraph<Planet, DefaultEdge>(DefaultEdge.class);
 	for (int k = 0; k < 3; k++){
@@ -104,7 +109,7 @@ public class NewGame{
 	return world;
     }
     
-    private Player newPlayer(){
+    private static Player newPlayer(){
 	Player p = Player.getPlayer();;
 	Scanner scan = new Scanner(System.in);
 	System.out.println("> What is your name?\n> ");

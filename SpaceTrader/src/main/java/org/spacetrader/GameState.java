@@ -1,3 +1,9 @@
+/**
+ * GameState.java
+ * @desc Singleton class that maintains the gamestate throughout the 
+ * life of the process
+*/
+
 import org.jgrapht.*;
 import org.jgrapht.traverse.*;
 import org.jgrapht.graph.*;
