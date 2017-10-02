@@ -15,6 +15,8 @@ public class Government_Build extends Building {
         this.blockade = blockade;
     }
 
+    public void save(){}
+
     @Override
     public String toString() {
         return "This is the government building of the island " + belongs;

@@ -1,29 +1,22 @@
-import java.util.Scanner;
+import org.jgrapht.*;
+import org.jgrapht.graph.*;
 
-public class GameState{
-    private Player p;
-    public GameState(Player p){
-	this.p = p;
-	init();
+public final class GameState{
+    private static Player p;
+    private static final GameState state_instance = new GameState();
+    
+    private GameState(){
     }
 
-    private void init(){
-	generateWorld();
-	newPlayer();
+    public static GameState getState(){
+	return state_instance;
     }
 
-    private void generateWorld(){
-
+    public void init(Player p, JGraphT world){
+        this.p = p;
+	this.world = world;
     }
-
-    private void newPlayer(){
- 	Scanner scan = new Scanner(System.in);
-	System.out.println("> What is your name?\n> ");
-	p.setName(scan.next());
-	System.out.println("> What is the name of your ship?\n> ");
-	p.setShip(new Ship(scan.next()));
-    }
-
-   
 
 }
+   
+

@@ -13,6 +13,8 @@ abstract class Planet_Inhabited extends Planet {
         return buildings;
     }
 
+    public void save(){}
+
     @Override
     public String toString() {
         return super.toString() + ", Buildings: " + Arrays.toString(buildings);

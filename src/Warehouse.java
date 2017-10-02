@@ -12,4 +12,7 @@ public class Warehouse extends Building {
         this.size = size;
         this.blockade = blockade;
     }
+
+    public void save(){}
+    
 }

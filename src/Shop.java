@@ -19,4 +19,7 @@ public class Shop extends Building {
         }
         return modFix;
     }
+
+    public void save(){}
+    
 }
