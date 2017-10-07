@@ -41,6 +41,10 @@ public final class GameState{
 	//}
     }
 
+    public Player getPlayer(){
+	return p;
+    }
+
 }
    
 

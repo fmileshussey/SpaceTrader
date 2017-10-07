@@ -17,6 +17,15 @@ public final class Player{
 
     public void setShip(Ship ship){
 	this.ship = ship;
+	location = ship.getName();
+    }
+
+    public String getName(){
+	return name;
+    }
+
+    public String getLocation(){
+	return location;
     }
 
     public void save(){}
